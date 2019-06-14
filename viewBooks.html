@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ver Libros</title>
+    <!-- Estilos -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/><!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="resources/css/css.css"/><!-- Mi Style -->
+    <!-- Scripts -->
+    <script src="js/jquery.js" ></script><!--Jquery-->
+    <script src="js/bootstrap.min.js"></script><!--Bootstrap-->
+    <script src="resources/js/js.js"></script><!-- Mi Script -->
+</head>
+<body>
+        <!-- Menu -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">LibrosLibres.com</a>
+                </div>
+            
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="viewBooks.html">Biblioteca</a></li>
+                    </ul>
+                
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input type="text" class="form-control" onblur="nombreLibroBuscar = this.value;"  placeholder="Search">
+                        </div>
+                        <button type="submit" onclick="buscarLibro();" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                    </form>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="perfil.html">Perfil</a></li>
+                        <li><a href="iniciarSesion.html">Iniciar Sesion</a></li>
+                        <li><a href="registrarse.html">Registrarse</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+        <!-- Contenido -->
+        <div class="content-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <article>
+                        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                            <a href="verLibro.html" class="thumbnail">
+                                <img src="./resources/libros/Armada/cover-min_opt.jpg" alt="">
+                                <div class="caption">
+                                    <p class="text-center">Armada</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                            <a href="verLibro.html" class="thumbnail">
+                                <img src="./resources/libros/El bosque oscuro/cover-min_opt.jpg" alt="">
+                                <div class="caption">
+                                    <p class="text-center">El Bosque Oscuro</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="clearfix visible-xs-block"></div>
+                        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                            <a href="verLibro.html" class="thumbnail">
+                                <img src="./resources/libros/El demonio de las sombras/cover-min_opt.jpg" alt="">
+                                <div class="caption">
+                                    <p class="text-center">El Demonio de las Sombras</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                            <a href="verLibro.html" class="thumbnail">
+                                <img src="./resources/libros/El fin de la muerte/cover-min_opt.jpg" alt="">
+                                <div class="caption">
+                                    <p class="text-center">El Fin de la Muerte</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="clearfix visible-xs-block"></div>
+                        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                            <a href="verLibro.html" class="thumbnail">
+                                <img src="./resources/libros/El hombre sombra/cover-min_opt.jpg" alt="">
+                                <div class="caption">
+                                    <p class="text-center">El Hombre Sombra</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                            <a href="verLibro.html" class="thumbnail">
+                                <img src="./resources/libros/El imperio de las tormentas/cover-min_opt.jpg" alt="">
+                                <div class="caption">
+                                    <p class="text-center">El Imperio de las Tormentas</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="clearfix visible-xs-block"></div>
+                        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                            <a href="verLibro.html" class="thumbnail">
+                                <img src="./resources/libros/El marciano/cover-min_opt.jpg" alt="">
+                                <div class="caption">
+                                    <p class="text-center">El Marciano</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                            <a href="verLibro.html" class="thumbnail">
+                                <img src="./resources/libros/El nombre del viento/cover-min_opt.jpg" alt="">
+                                <div class="caption">
+                                    <p class="text-center">El Nombre del Viento</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="clearfix visible-xs-block"></div>
+                        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                            <a href="verLibro.html" class="thumbnail">
+                                <img src="./resources/libros/El temor de un hombre sabio/cover-min_opt.jpg" alt="">
+                                <div class="caption">
+                                    <p class="text-center">El Temor de un Hombre Sabio</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                            <a href="verLibro.html" class="thumbnail">
+                                <img src="./resources/libros/En llamas/cover-min_opt.jpg" alt="">
+                                <div class="caption">
+                                    <p class="text-center">En Llamas</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="clearfix visible-xs-block"></div>
+                        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                            <a href="verLibro.html" class="thumbnail">
+                                <img src="./resources/libros/It/cover-min_opt.jpg" alt="">
+                                <div class="caption">
+                                    <p class="text-center">It</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                            <a href="verLibro.html" class="thumbnail">
+                                <img src="./resources/libros/La armadura de la luz/cover-min_opt.jpg" alt="">
+                                <div class="caption">
+                                    <p class="text-center">La Armadura de la Luz</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="clearfix visible-xs-block"></div>
+                        <div class="clearfix visible-lg-block"></div>
+                        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                            <a href="verLibro.html" class="thumbnail">
+                                <img src="./resources/libros/La quinta estación/cover-min_opt.jpg" alt="">
+                                <div class="caption">
+                                    <p class="text-center">La Quinta Estacion</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                            <a href="verLibro.html" class="thumbnail">
+                                <img src="./resources/libros/Ready Player One/cover-min_opt.jpg" alt="">
+                                <div class="caption">
+                                    <p class="text-center">Ready Player One</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="clearfix visible-xs-block"></div>
+                        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                            <a href="verLibro.html" class="thumbnail">
+                                <img src="./resources/libros/Sinsajo/cover-min_opt.jpg" alt="">
+                                <div class="caption">
+                                    <p class="text-center">Sinsajo</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="container-fluid navbar-default">
+                <div class="container">
+                    <h4>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-4">
+                                <a href="http://www.facebook.com" class="list-group-item"><span class="glyphicon glyphicon-globe separate"></span>Facebook</a>
+                                <a href="http://www.twitter.com" class="list-group-item"><span class="glyphicon glyphicon-globe separate"></span>Twitter</a>
+                            </div>
+                            <div class="col-xs-12 col-md-4">
+                                <a href="" onclick="alert('Desarrollado por:\nLeonel Bongiovanni\nEmail: labongiovanni@live.com.ar')" class="list-group-item"><span class="glyphicon glyphicon-globe separate"></span>Contact Us</a>
+                            </div>
+                            <div class="col-xs-12 col-md-4">
+                                <div class="text-center">
+                                    <p>
+                                        Desarrollado Por:<br/>
+                                        Leonel Bongiovanni
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </h4>
+                </div>
+        </footer>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Libros Libres</title>
+        <!-- Estilos -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/><!-- Bootstrap -->
+        <link rel="stylesheet" type="text/css" href="resources/css/css.css"/><!-- Mi Style -->
+        <!-- Scripts -->
+        <script src="js/jquery.js" ></script><!--Jquery-->
+        <script src="js/bootstrap.min.js"></script><!--Bootstrap-->
+        <script src="resources/js/js.js"></script><!-- Mi Script -->
+    </head>
+    <body>
+        <!-- Menu -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">LibrosLibres.com</a>
+                </div>
+            
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="viewBooks.html">Biblioteca</a></li>
+                    </ul>
+                
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input type="text" class="form-control" onblur="nombreLibroBuscar = this.value;"  placeholder="Search">
+                        </div>
+                        <button type="submit" onclick="buscarLibro();" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                    </form>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="perfil.html">Perfil</a></li>
+                        <li><a href="iniciarSesion.html">Iniciar Sesion</a></li>
+                        <li><a href="registrarse.html">Registrarse</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+        <!-- Contenido de la pagina -->
+        <div class="container-fluid">
+            <div class="main thumbnail">
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- aqui insertaremos el slider -->
+                            <div id="carousel1" class="carousel slide" data-ride="carousel">
+                                <!-- Indicatodores -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel1" data-slide-to="1"></li>
+                                    <li data-target="#carousel1" data-slide-to="2"></li>
+                                </ol>
+                                
+                                <!-- Contenedor de las imagenes -->
+                                <div class="carousel-inner" role="listbox">
+                                    
+                                    <div class="item active">
+                                        <a href="verLibro.html">
+                                            <img src="./resources/libros/Armada/cover-min_opt.jpg" alt="Armada">
+                                            <div class="carousel-caption"> Armada </div>
+                                        </a>
+                                    </div>
+                                    
+                                    <div class="item">
+                                        <a href="verLibro.html">
+                                            <img src="./resources/libros/El marciano/cover-min_opt.jpg" alt="Imagen 2">
+                                            <div class="carousel-caption"> El Marciano </div>
+                                        </a>
+                                    </div>
+                                    
+                                    <div class="item">
+                                        <a href="verLibro.html">
+                                            <img src="./resources/libros/It/cover-min_opt.jpg" alt="Imagen 3">
+                                            <div class="carousel-caption"> It </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <!-- Controls -->
+                                <a class="left carousel-control" href="#carousel1" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Anterior</span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel1" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Siguiente</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carusel -->
+                
+                <hr>
+                <!--2) Luego me gustaria que tenga un visor de fotos, ahi poner links a otros libros, podrian ser 
+                    el mas descargado, mas nuevo, y el que tenga mejor puntuacion -->
+                    
+                <div class="row">
+                    <article>
+                        <div class="col-md-8"> 
+                            <h3 class="text-center">Ultimos Agreados</h3>
+                            <!-- Fila 1 -->
+                            <div class="col-xs-6 col-sm-3">
+                                <a href="verLibro.html" class="thumbnail">
+                                    <img src="./resources/libros/Armada/cover-min_opt.jpg" alt="portada 1">
+                                    <div class="caption">
+                                        <p class="text-center">Armada</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                <a href="verLibro.html" class="thumbnail">
+                                    <img src="./resources/libros/El bosque oscuro/cover-min_opt.jpg" alt="portada 2">
+                                    <div class="caption">
+                                        <p class="text-center">El Bosque Oscuro</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                <a href="verLibro.html" class="thumbnail">
+                                    <img src="./resources/libros/En llamas/cover-min_opt.jpg" alt="portada 3">
+                                    <div class="caption">
+                                        <p class="text-center">En Llamas</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                <a href="verLibro.html" class="thumbnail">
+                                    <img src="./resources/libros/El fin de la muerte/cover-min_opt.jpg" alt="portada 4">
+                                    <div class="caption">
+                                        <p class="text-center">El Fin de la Muerte</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Fila 2 -->
+                            <div class="col-xs-6 col-sm-3">
+                                <a href="verLibro.html" class="thumbnail">
+                                    <img src="./resources/libros/El hombre sombra/cover-min_opt.jpg" alt="portada 5">
+                                    <div class="caption">
+                                        <p class="text-center">El Hombre Sombra</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                <a href="verLibro.html" class="thumbnail">
+                                    <img src="./resources/libros/El imperio de las tormentas/cover-min_opt.jpg" alt="portada 6">
+                                    <div class="caption">
+                                        <p class="text-center">El Impreio de las Tormentas</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                <a href="verLibro.html" class="thumbnail">
+                                    <img src="./resources/libros/El marciano/cover-min_opt.jpg" alt="portada 7">
+                                    <div class="caption">
+                                        <p class="text-center">El Marciano</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                <a href="verLibro.html" class="thumbnail">
+                                    <img src="./resources/libros/El nombre del viento/cover-min_opt.jpg" alt="portada 8">
+                                    <div class="caption">
+                                        <p class="text-center">El Nombre del Viento</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Contendio Principal -->
+                    <aside>
+                        <div class="col-md-4">
+                            <div class="text-center">
+                                <h3>Top Mas Descargados</h3>
+                                <div class="list-group">
+                                    <a href="verLibro.html" class="list-group-item">Armada</a>
+                                    <a href="#" class="list-group-item disabled">El Bosque Oscuro</a>
+                                    <a href="#" class="list-group-item disabled">En Llamas</a>
+                                    <a href="#" class="list-group-item disabled">El Fin de la Muerte</a>
+                                    <a href="#" class="list-group-item disabled">El Hombre Sombra</a>
+                                    <a href="#" class="list-group-item disabled">El Imperio de las Tormentas</a>
+                                    <a href="#" class="list-group-item disabled">El Marciano</a>
+                                    <a href="#" class="list-group-item disabled">El Nombre del Viento</a>
+                                    <a href="#" class="list-group-item disabled">It</a>
+                                    <a href="#" class="list-group-item disabled">Ready Player One</a>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                    <!-- Contenido Secundario -->
+                </div>     
+            </div>
+            <!-- Contenido -->
+
+            <!--3) aca la pagina podria dividirse en 2, el izquierdo seria el principal, donde pondriamos los
+                ultimos agregados, y del lado derecho, una pequeña lista de los top 10 en cosas como Descargas,
+                Visitas, calificacion.-->
+        </div>
+
+        <!-- Footer -->
+        <footer class="container-fluid navbar-default footer">
+            <div class="container">
+                <h4>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-4">
+                            <a href="http://www.facebook.com" class="list-group-item"><span class="glyphicon glyphicon-globe separate"></span>Facebook</a>
+                            <a href="http://www.twitter.com" class="list-group-item"><span class="glyphicon glyphicon-globe separate"></span>Twitter</a>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <a href="" onclick="alert('Desarrollado por:\nLeonel Bongiovanni\nEmail: labongiovanni@live.com.ar')" class="list-group-item"><span class="glyphicon glyphicon-globe separate"></span>Contact Us</a>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="text-center">
+                                <p>
+                                    Desarrollado Por:<br/>
+                                    Leonel Bongiovanni
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </h4>
+            </div>
+        </footer>
+        <!--4) Por ultimo un footer con links a un "contact us falso", tambien links a facebook, y twitter-->
+        <!-- HASTA ACA EL FOOTER Y LA PAGINA -->
+    </body>
+    </html>

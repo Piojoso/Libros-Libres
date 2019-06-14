@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Subir Libro</title>
+    <!-- Estilos -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/><!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="resources/css/css.css"/><!-- Mi Style -->
+    <!-- Scripts -->
+    <script src="js/jquery.js" ></script><!--Jquery-->
+    <script src="js/bootstrap.min.js"></script><!--Bootstrap-->
+    <script src="resources/js/js.js"></script><!-- Mi Script -->
+</head>
+<body>
+        <!-- Menu -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">LibrosLibres.com</a>
+                </div>
+            
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="viewBooks.html">Biblioteca</a></li>
+                    </ul>
+                
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input type="text" class="form-control" onblur="nombreLibroBuscar = this.value;"  placeholder="Search">
+                        </div>
+                        <button type="submit" onclick="buscarLibro();" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                    </form>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="perfil.html">Perfil</a></li>
+                        <li><a href="iniciarSesion.html">Iniciar Sesion</a></li>
+                        <li><a href="registrarse.html">Registrarse</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+        <!-- Component -->
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-0 col-sm-1"></div>
+                <div class="col-xs-12 col-sm-10 thumbnail">
+                    <h2 class="text-center">Subir Un Libro</h2>
+                    <hr/>
+                    <form action="" method="post" class="">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6">
+                                <a href="#" class="thumbnail">
+                                    <img src="./resources/images/no-image.png" height="495" width="329" alt="Portada del Libro"></img>
+                                </a>
+                                <input type="file" class="btn btn-primary btn-block">
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">Titulo:</span>
+                                        <input type="text" class="form-control" value="">
+                                    </div>
+                                </div>
+                                <hr/>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">Autor:</span>
+                                        <input type="text" class="form-control" value="">
+                                    </div>
+                                </div>
+                                <hr/>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">Genero:</span>
+                                        <input type="text" class="form-control" placeholder="genero1, genero2" value="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="row">
+                            <div class="col-xs-1"></div>
+                            <div class="col-xs-10">
+                                <textarea class="form-control" rows="3" placeholder="Sinapsis"></textarea>
+                            </div>
+                            <div class="col-xs-1"></div>
+                        </div>
+                        <hr/>
+                        <div class="row">
+                            <div class="col-xs-2 col-md-offset-10">
+                                <button class="btn btn-primary">Guardar</button>
+                            </div>
+                        </div>
+                        <br/>
+                    </form>
+                </div>
+                <div class="col-xs-0 col-sm-1"></div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="container-fluid navbar-default">
+                <div class="container">
+                    <h4>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-4">
+                                <a href="http://www.facebook.com" class="list-group-item"><span class="glyphicon glyphicon-globe separate"></span>Facebook</a>
+                                <a href="http://www.twitter.com" class="list-group-item"><span class="glyphicon glyphicon-globe separate"></span>Twitter</a>
+                            </div>
+                            <div class="col-xs-12 col-md-4">
+                                <a href="" onclick="alert('Desarrollado por:\nLeonel Bongiovanni\nEmail: labongiovanni@live.com.ar')" class="list-group-item"><span class="glyphicon glyphicon-globe separate"></span>Contact Us</a>
+                            </div>
+                            <div class="col-xs-12 col-md-4">
+                                <div class="text-center">
+                                    <p>
+                                        Desarrollado Por:<br/>
+                                        Leonel Bongiovanni
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </h4>
+                </div>
+        </footer>
+</body>
+</html>

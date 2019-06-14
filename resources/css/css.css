@@ -1,0 +1,40 @@
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div{
+    background-color: transparent;
+}
+
+.principal{
+    margin: 1%;
+    background-color: transparent;
+}
+
+.contenedor{
+    background-color: transparent;
+}
+
+.rojo{
+    background: #CC0000;
+    border-color: #8b0000;
+}
+
+.separate{
+    padding-right: 15px;
+}
+
+.navbar-default {
+    background-color: #f8f8f8;
+    border: 1px solid #e7e7e7;
+    border-radius: 4px;
+}
+
+body{
+    background: url("../images/background.webp");
+}
+
+footer{
+    vertical-align: bottom !important
+}
