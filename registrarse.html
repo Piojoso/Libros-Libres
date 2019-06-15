@@ -61,19 +61,19 @@
                         <div class="form-group">
                             <label for="nombre" class="control-label col-md-2 col-md-offset-1">Nombre:</label>
                             <div class="col-md-8">
-                                <input id="nombre" class="form-control" type="text" placeholder="Nombre" />
+                                <input id="nombre" onblur="validarNombre(this);" class="form-control" type="text" placeholder="Nombre" />
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="apellido" class="control-label col-md-2 col-md-offset-1">Apellido:</label>
                             <div class="col-md-8">
-                                <input id="apellido" class="form-control" type="Apellido" placeholder="Apellido" />
+                                <input id="apellido" onblur="validarApellido(this);" class="form-control" type="Apellido" placeholder="Apellido" />
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="email" class="control-label col-md-2 col-md-offset-1">Email:</label>
                             <div class="col-md-8">
-                                <input id="email" class="form-control" type="email" placeholder="example@gmail.com" />
+                                <input id="email" onblur="validarEmail(this);" class="form-control" type="email" placeholder="example@gmail.com" />
                             </div>
                         </div>
                         <div class="form-group">

@@ -12,6 +12,7 @@
     <script src="js/jquery.js" ></script><!--Jquery-->
     <script src="js/bootstrap.min.js"></script><!--Bootstrap-->
     <script src="resources/js/js.js"></script><!-- Mi Script -->
+    <script src="./resources/js/verLibro.js"></script><!-- Mi Script -->
 </head>
 <body>
         <!-- Menu -->
@@ -95,20 +96,49 @@
                                 <h3 class="text-center">Comentarios</h3>
                             </div>
                         </div>
+                        <hr/>
                         <div class="row">
-                            <div class="col-xs-2 col-xs-offset-2">
-                                <div class="media pull-right">
+                            <div class="col-xs-8 col-xs-offset-3">
+                                <div class="media">
                                     <div class="media-left">
-                                        <a href="#"><img src="http://dummyimage.com/64x64/000/fff" alt=""></a>
+                                        <a href="#"><img class="img-responsive" src="./resources/images/profile.png" alt=""></a>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="thumbnail ">
+                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea laudantium accusamus quae totam tempore, id beatae, corporis a sint quasi distinctio debitis ad quo praesentium. Voluptate quaerat consectetur fugiat obcaecati.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xs-2 col-sm-4 col-md-6">
-                                <div class="thumbnail">
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea laudantium accusamus quae totam tempore, id beatae, corporis a sint quasi distinctio debitis ad quo praesentium. Voluptate quaerat consectetur fugiat obcaecati.</p>
+                        </div>
+                        <hr/>
+                        <div class="row">
+                            <div class="col-xs-8 col-xs-offset-3">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#"><img class="img-responsive" src="./resources/images/profile.png" alt=""></a>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="thumbnail ">
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam labore illum nisi animi, quisquam harum id sapiente reprehenderit quam soluta deleniti nesciunt placeat officiis ullam itaque totam recusandae autem iusto!</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-xs-2"></div>
+                        </div>
+                        <hr/>
+                        <div class="row">
+                            <div class="col-xs-2 col-xs-offset-2">
+                                <h4 class="text-center pull-right">Comentar:</h4>
+                            </div>
+                            <div class="col-xs-6">
+                                <textarea class="form-control" onblur="comentario = this" placeholder="comentario" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-2 col-xs-offset-8">
+                                <button type="button" onclick="enviarComentario();" class="form-control btn btn-primary">Enviar</button>
+                            </div>
                         </div>
                     </div>
                 </div>

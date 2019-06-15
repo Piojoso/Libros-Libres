@@ -99,6 +99,50 @@ const guardar = () =>{
     //rellenar();
 }
 
+let emailValido = /^\w+@\w+\.\w{3}(\.\w{2})?$/;
+
+const validarEmail = (input) =>{
+    email = input.value;
+    let group = input.parentNode.parentNode;
+    let atributo = group.getAttribute('class');
+    if(!emailValido.test(email)){
+        alert('Email Invalido');
+        group.setAttribute('class', atributo + ' has-error');
+    }
+    else{
+        group.setAttribute('class', 'form-group');
+    }
+}
+
+let nombreValido = /^[A-Z][a-z]{3,18}$/;
+let apellidoValido = /^[A-Z][a-z]{3,28}$/;
+
+const validarNombre = (input) => {
+    let nombre = input.value;
+    let group = input.parentNode.parentNode;
+    let atributo = group.getAttribute('class');
+    if(!nombreValido.test(nombre)){
+        alert('El Nombre Ingresado es invalido');
+        group.setAttribute('class', atributo + ' has-error');
+    }
+    else{
+        group.setAttribute('class', 'form-group');
+    }
+}
+
+const validarApellido = (input) => {
+    let apellido = input.value;
+    let group = input.parentNode.parentNode;
+    let atributo = group.getAttribute('class');
+    if(!apellidoValido.test(apellido)){
+        alert('El Apellido Ingresado es invalido');
+        group.setAttribute('class', atributo + ' has-error');
+    }
+    else{
+        group.setAttribute('class', 'form-group');
+    }
+}
+
 const rellenar = () =>{
     var height = window.screen.availHeight;
     if(document.getElementsByTagName("body")[0].height < height){
